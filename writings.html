@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Videos — Paul Tomisola</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17140F;
+    --text: #EDEAE2;
+    --muted: #9C9A92;
+    --rule: rgba(255,255,255,0.16);
+    --accent: #D9A441;
+    --max-w: 760px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+
+  .label{font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);}
+
+  header{padding:28px 0;}
+  header .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  .brand{font-family:'Lora', Georgia, serif; font-size:15px; letter-spacing:0.14em; text-transform:uppercase;}
+  nav{display:flex; gap:26px;}
+  nav a{
+    position:relative; font-size:14.5px; text-decoration:none; color:var(--muted);
+    transition:color .3s cubic-bezier(.4,0,.2,1); padding-bottom:3px;
+  }
+  nav a::after{
+    content:''; position:absolute; left:0; bottom:0; width:100%; height:1px;
+    background:var(--accent); transform:scaleX(0); transform-origin:right;
+    transition:transform .35s cubic-bezier(.4,0,.2,1);
+  }
+  nav a:hover::after, nav a:focus-visible::after{transform:scaleX(1); transform-origin:left;}
+  nav a.current{color:var(--text);}
+  nav a:hover, nav a:focus-visible{color:var(--text);}
+
+  hr.rule{border:none; border-top:1px solid var(--rule); margin:0;}
+
+  .intro{padding:52px 0 8px;}
+  .intro h1{font-family:'Lora', Georgia, serif; font-weight:440; font-size:clamp(28px, 5vw, 40px); line-height:1.15; margin:0 0 14px;}
+  .intro p{font-size:14.5px; color:#C9C6BC; max-width:56ch; margin:0 0 28px;}
+
+  .tabs{display:flex; gap:26px; flex-wrap:wrap; padding:6px 0 16px;}
+  .tab-btn{
+    background:none; border:none; cursor:pointer; padding:6px 0 12px;
+    font-family:'Inter', sans-serif; font-size:14.5px; color:var(--muted);
+    border-bottom:2px solid transparent; transition:color .3s cubic-bezier(.4,0,.2,1), border-color .3s cubic-bezier(.4,0,.2,1);
+  }
+  .tab-btn sup{font-size:10px; margin-left:2px;}
+  .tab-btn.active{color:var(--text); border-color:var(--accent);}
+  .tab-btn:hover{color:var(--text);}
+
+  .category{padding:8px 0; display:none; opacity:0; transform:translateY(8px); transition:opacity .35s cubic-bezier(.4,0,.2,1), transform .35s cubic-bezier(.4,0,.2,1);}
+  .category.active{display:block;}
+  .category.active.fade-in{opacity:1; transform:translateY(0);}
+  .category-head{display:flex; align-items:baseline; gap:10px; padding:12px 0 6px; justify-content:space-between;}
+  .category-head h2{font-family:'Lora', Georgia, serif; font-weight:440; font-size:19px; margin:0; text-transform:capitalize;}
+  .category-count{font-size:11px; color:var(--muted);}
+
+  .piece{display:flex; align-items:baseline; gap:14px; text-decoration:none; padding:16px 0; transition:padding-left .3s cubic-bezier(.4,0,.2,1);}
+  .piece:hover{padding-left:6px;}
+  .piece + .piece{border-top:1px solid var(--rule);}
+  .piece-dot{width:6px; height:6px; border-radius:50%; background:var(--accent); flex-shrink:0; margin-top:8px;}
+  .piece-body{flex:1;}
+  .piece-title{font-family:'Lora', Georgia, serif; font-size:16.5px; font-weight:440; color:var(--text); margin:0 0 4px; transition:color .2s ease;}
+  .piece:hover .piece-title, .piece:focus-visible .piece-title{color:var(--accent);}
+  .piece-desc{font-size:13px; color:var(--muted); margin:0;}
+  .piece-meta{font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); text-align:right; white-space:nowrap; flex-shrink:0;}
+
+  footer{padding:36px 0 40px;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:600px){
+    .wrap{padding:0 22px;}
+    header{padding:22px 0;}
+    nav{gap:18px;}
+    .intro{padding:36px 0 8px;}
+    .tabs{gap:18px; padding:6px 0 20px;}
+    .category{padding:16px 0;}
+    .category-head{padding:16px 0 10px;}
+    .piece{flex-wrap:wrap; padding:20px 0;}
+    .piece-meta{text-align:left;}
+  }
+
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);}
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Paul Tomisola</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="writings.html" class="current">Writing</a>
+      <a href="elsewhere.html">Elsewhere</a>
+    </nav>
+  </div>
+</header>
+<hr class="rule">
+
+<section class="intro wrap reveal">
+  <h1>Writing &amp; Videos</h1>
+  <p>The full archive — football, music, culture, and essays on Medium, alongside video work. 🦉</p>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="football">Football <sup>8</sup></button>
+    <button class="tab-btn" data-tab="music">Music <sup>4</sup></button>
+    <button class="tab-btn" data-tab="culture">Culture &amp; Conversations <sup>3</sup></button>
+    <button class="tab-btn" data-tab="essays">Essays <sup>8</sup></button>
+    <button class="tab-btn" data-tab="videos">Videos <sup>3</sup></button>
+  </div>
+</section>
+<hr class="rule">
+
+<section class="category wrap active" id="football">
+  <div class="category-head"><h2>Football</h2><span class="category-count">8</span></div>
+
+  <a class="piece" href="https://medium.com/@paultomisola/projections-profiling-rodri-at-barcelona-and-why-real-madrid-need-him-more-b24758c09df5" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Profiling Rodri at Barcelona, and Why Real Madrid Need Him More</p><p class="piece-desc">Rodri's Barcelona move through a tactical lens.</p></span>
+    <span class="piece-meta">Aug 2026</span>
+  </a>
+
+  <a class="piece" href="https://medium.com/@paultomisola/thomas-tuchel-a-masterclass-in-cowardice-vs-argentina-3f17a34df6ac" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Thomas Tuchel, A Masterclass in Cowardice vs Argentina</p><p class="piece-desc">The most confounding moment in English football?</p></span>
+    <span class="piece-meta">Jul 2026</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/have-portugal-sacrificed-their-world-cup-dreams-for-cristiano-de170984e054" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Have Portugal Sacrificed Their World Cup Dreams for Cristiano?</p><p class="piece-desc">Time for Portugal to move on?</p></span>
+    <span class="piece-meta">Jul 2026</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/is-football-really-dead-or-are-you-just-drunk-on-nostalgia-7ddb1d990829" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Is Football Really Dead, or Are You Just Drunk on Nostalgia?</p><p class="piece-desc">Football isn't dead, bro. You just grew up.</p></span>
+    <span class="piece-meta">Jun 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/ballon-dor-2024-robbery-or-fair-play-ca5792a85aac" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Ballon d'Or 2024: Robbery or Fair Play?</p><p class="piece-desc">Making the case for Rodri's contested win.</p></span>
+    <span class="piece-meta">Nov 2024</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/barcelona-isnt-ready-for-flick-yet-ab7ddfc06cc0" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Barcelona Isn't Ready for Flick—Yet</p><p class="piece-desc">On the gap between Barça and Flick.</p></span>
+    <span class="piece-meta">Dec 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/a-case-for-rafael-le%C3%A3o-as-the-ideal-left-wing-option-for-barcelona-and-why-he-could-be-the-answer-5b10fe768b90" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">A Case for Rafael Leão as the Ideal Left-Wing Option for Barcelona</p><p class="piece-desc">Why he could be the answer.</p></span>
+    <span class="piece-meta">Sep 2024</span>
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">A Peek into Lamine Yamal's Mental Profile and Why It Sets Him Apart</p><p class="piece-desc">Talent is never enough.</p></span>
+    <span class="piece-meta">Jun 2024</span>
+  </a>
+</section>
+
+<section class="category wrap" id="music">
+  <div class="category-head"><h2>Music</h2><span class="category-count">4</span></div>
+
+  <a class="piece" href="https://medium.com/@paultomisola/taves-popstar-is-a-breath-of-fresh-air-941ca708a3cd" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Taves' Popstar Is a Breath of Fresh Air</p><p class="piece-desc">A track-by-track review of Popstar — Side A.</p></span>
+    <span class="piece-meta">Aug 2026</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/a-framework-for-critically-engaging-music-projects-through-bnxns-captain-ae0e587eb69b" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">A Framework for Engaging Music Through Bnxn's <em>Captain</em></p><p class="piece-desc">A way of thinking about music beyond first listens.</p></span>
+    <span class="piece-meta">Jul 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/then-1t-g0t-crazy-64fc5c89c076" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">then 1t g0t Crazy</p><p class="piece-desc">A brief, hypnotic ride through Zaylevelten's most recent album.</p></span>
+    <span class="piece-meta">Nov 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/odumodublvck-the-misunderstood-genius-dd55d63897bc" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">ODUMODUBLVCK: The Misunderstood Genius</p><p class="piece-desc">Why his music matters beyond rap purists' standards.</p></span>
+    <span class="piece-meta">Jun 2025</span>
+  </a>
+</section>
+
+<section class="category wrap" id="culture">
+  <div class="category-head"><h2>Culture &amp; Conversations</h2><span class="category-count">3</span></div>
+
+  <a class="piece" href="https://medium.com/@paultomisola/on-debuts-and-becoming-a-conversation-with-wole-newjuice-83e34f96b9a2" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">On Debuts and Becoming: A Conversation with Wole Newjuice</p><p class="piece-desc">On debuts, growth, and becoming.</p></span>
+    <span class="piece-meta">Jul 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/are-there-limits-to-papal-primacy-b973653e490b" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Are There Limits to Papal Primacy?</p><p class="piece-desc">A look at the boundaries of papal authority.</p></span>
+    <span class="piece-meta">Sep 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/am-i-really-catholic-or-was-i-just-born-one-5614aa48a79f" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Am I Really Catholic, or Was I Just Born One?</p><p class="piece-desc">On faith inherited versus faith chosen.</p></span>
+    <span class="piece-meta">Jun 2025</span>
+  </a>
+</section>
+
+<section class="category wrap" id="essays">
+  <div class="category-head"><h2>Essays</h2><span class="category-count">8</span></div>
+
+  <a class="piece" href="https://medium.com/@paultomisola/ned-starks-fate-as-a-metaphor-for-life-a-stark-lesson-from-game-of-thrones-1e93ef620b7b" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Stark Lessons: Ned Stark's Fate as a Metaphor for Life</p><p class="piece-desc">Ned Stark's story, read as a metaphor for life.</p></span>
+    <span class="piece-meta">Jun 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/the-business-of-listening-595649811d28" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">The Business of Listening</p><p class="piece-desc">On talking to strangers.</p></span>
+    <span class="piece-meta">Jul 2026</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/happy-new-year-wise-ones-the-fool-sees-nothing-new-ebce20803186" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Happy New Year, Wise Ones</p><p class="piece-desc">A New Year's illusion hides unchanged lives, unless we truly change.</p></span>
+    <span class="piece-meta">Jan 2026</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/a-man-of-double-deed-10a9879128f9" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">A Man of Double Deed</p><p class="piece-desc">Built around the Macbeth line — "'twas death and death indeed."</p></span>
+    <span class="piece-meta">Oct 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/3-18-in-aj-city-d9f67a9b34ba" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">3:18 in AJ City</p><p class="piece-desc">A short reflection on time and place.</p></span>
+    <span class="piece-meta">Jul 2026</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/the-ontology-of-the-queef-dc75338d2d17" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">The Ontology of the Queef</p><p class="piece-desc">An essay on love, language, and living unfiltered.</p></span>
+    <span class="piece-meta">Dec 2025</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/you-may-never-be-elite-but-dont-worry-you-can-still-go-pro-7fde982bb44b" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">You May Never Be Elite, But Don't Worry, You Can Still Go Pro!</p><p class="piece-desc">Just do it, start.</p></span>
+    <span class="piece-meta">Sep 2024</span>
+  </a>
+  <a class="piece" href="https://medium.com/@paultomisola/nobody-is-coming-to-save-you-ebf0f255e875" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Nobody is Coming to Save You</p><p class="piece-desc">You know we're all alone in this together, right?</p></span>
+    <span class="piece-meta">Mar 2025</span>
+  </a>
+</section>
+
+<section class="category wrap" id="videos">
+  <div class="category-head"><h2>Videos</h2><span class="category-count">3</span></div>
+
+  <a class="piece" href="https://www.instagram.com/reel/Dbv1FBIIJP6/" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">Tom Holland. Andrew Garfield. Tobey Maguire. Who Is the Best Spider-Man?</p><p class="piece-desc">Ranking the three live-action Spider-Men, once and for all.</p></span>
+    <span class="piece-meta">Instagram</span>
+  </a>
+
+  <a class="piece" href="https://www.instagram.com/bytomisola/reel/DbOcdrlSCiN/" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">I'm Back</p><p class="piece-desc">Resurgence.</p></span>
+    <span class="piece-meta">Instagram</span>
+  </a>
+  <a class="piece" href="https://www.instagram.com/bytomisola/reel/DbWSSNwoOxZ/" target="_blank" rel="noopener">
+    <span class="piece-dot"></span>
+    <span class="piece-body"><p class="piece-title">David Jonsson Is Black Panther!</p><p class="piece-desc">David Jonsson announced as the new Black Panther in a landmark unveiling.</p></span>
+    <span class="piece-meta">Instagram</span>
+  </a>
+</section>
+
+<hr class="rule">
+<footer>
+  <div class="wrap">
+    <span class="label">Lagos, Nigeria</span>
+    <span class="label">© 2026 Paul Tomisola</span>
+  </div>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.category');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => { p.classList.remove('active'); p.classList.remove('fade-in'); });
+      tab.classList.add('active');
+      const target = document.getElementById(tab.dataset.tab);
+      target.classList.add('active');
+      requestAnimationFrame(() => requestAnimationFrame(() => target.classList.add('fade-in')));
+    });
+  });
+  // Trigger fade-in for the initially active panel on load
+  requestAnimationFrame(() => {
+    const initial = document.querySelector('.category.active');
+    if (initial) requestAnimationFrame(() => initial.classList.add('fade-in'));
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
