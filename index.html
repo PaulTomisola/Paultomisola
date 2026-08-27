@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paul Tomisola — Writer, Analyst, Broadcaster</title>
+<title>Paul Tomisola – Writer, Analyst, Broadcaster</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -17,13 +17,18 @@
     --max-w: 760px;
   }
   *{box-sizing:border-box;}
+  html{overflow-x:hidden;}
+  img{max-width:100%; height:auto; display:block;}
   body{
     margin:0;
+    max-width:100vw;
+    overflow-x:hidden;
     background:var(--bg);
     color:var(--text);
     font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing:antialiased;
     line-height:1.65;
+    overflow-wrap:break-word;
   }
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
@@ -74,10 +79,11 @@
   .hero{padding:64px 0 44px;}
   .hero h1{
     font-family:'Lora', Georgia, serif;
-    font-weight:440;
-    font-size:clamp(32px, 5.5vw, 46px);
-    line-height:1.15;
-    margin:0 0 22px;
+    font-weight:400;
+    font-size:clamp(22px, 3vw, 30px);
+    line-height:1.35;
+    margin:0 0 20px;
+    max-width:34ch;
   }
   .hero p{
     font-size:16px;
@@ -159,7 +165,7 @@
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
 
   @media (max-width:600px){
-    .wrap{padding:0 22px;}
+    .wrap{padding:0 24px;}
     header{padding:22px 0;}
     nav{gap:18px;}
     .hero{padding:44px 0 36px;}
@@ -189,16 +195,31 @@
     transform:translateY(0);
   }
 
-  .hero{display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;}
-  .hero-text{flex:1; min-width:260px;}
+  .hero{display:flex; align-items:flex-start; justify-content:space-between; gap:48px; flex-wrap:wrap;}
+  .hero-text{flex:1; min-width:280px;}
+  .hero-side{flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:16px;}
   .hero-photo{
-    width:132px; height:132px; border-radius:50%;
+    width:220px; height:220px; border-radius:18px;
     object-fit:cover; flex-shrink:0;
     border:1px solid var(--rule);
   }
+  .hero-socials{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; max-width:220px;}
+  .hero-socials a{
+    text-decoration:none; font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase;
+    border:1px solid var(--rule); border-radius:100px; padding:7px 14px;
+    color:var(--muted);
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .hero-socials a:hover, .hero-socials a:focus-visible{color:var(--accent); border-color:var(--accent);}
   @media (max-width:600px){
-    .hero{flex-direction:column-reverse; align-items:flex-start; gap:20px;}
-    .hero-photo{width:96px; height:96px;}
+    .hero{flex-direction:column-reverse; align-items:center; text-align:center; gap:20px;}
+    .hero-side{width:100%;}
+    .hero-photo{width:96px; height:96px; border-radius:50%;}
+    .hero-text{min-width:0; width:100%;}
+    .hero p{max-width:100%; margin-left:auto; margin-right:auto;}
+  }
+  @media (max-width:380px){
+    .wrap{padding:0 18px;}
   }
 </style>
 </head>
@@ -218,11 +239,20 @@
 
 <section class="hero wrap reveal">
   <div class="hero-text">
-    <h1>Writer. Analyst.<br>Broadcaster.</h1>
-    <p>Curious about football, music, culture, and the ideas that connect them. Writing essays that matter, and telling stories that make familiar things feel new.</p>
+    <h1>There is always more to a story than the version we're given.</h1>
+
+    <p>A gap between what appears to be and what it actually is. Over the years, as a writer, broadcaster and analyst, I find myself coming back to conversations and stories that outlive the now, and to the different ways I find to hold onto them: written, spoken, recorded.</p>
     <div class="owl-tag">🦉 Curious Owl</div>
   </div>
-  <img class="hero-photo" src="pfp.jpg" alt="Paul Tomisola">
+  <div class="hero-side">
+    <img class="hero-photo" src="pfp.jpg" alt="Paul Tomisola">
+    <div class="hero-socials">
+      <a href="https://x.com/writenstein" target="_blank" rel="noopener">X</a>
+      <a href="https://medium.com/@paultomisola" target="_blank" rel="noopener">Medium</a>
+      <a href="https://substack.com/@bytomisola" target="_blank" rel="noopener">Substack</a>
+      <a href="https://www.instagram.com/bytomisola/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
 </section>
 
 <hr class="rule">
@@ -247,7 +277,7 @@
   <a class="piece" href="barcelona-isnt-ready-for-flick-yet.html">
     <span class="piece-dot"></span>
     <span class="piece-body">
-      <p class="piece-title">Barcelona Isn't Ready for Flick—Yet</p>
+      <p class="piece-title">Barcelona Isn't Ready for Flick–Yet</p>
       <p class="piece-desc">On the gap between Barça and Flick.</p>
     </span>
     <span class="piece-meta">Read on site</span>

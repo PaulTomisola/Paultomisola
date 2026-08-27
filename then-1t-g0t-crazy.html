@@ -18,13 +18,18 @@
     --max-w: 760px;
   }
   *{box-sizing:border-box;}
+  html{overflow-x:hidden;}
+  img{max-width:100%; height:auto; display:block;}
   body{
     margin:0;
+    max-width:100vw;
+    overflow-x:hidden;
     background:var(--bg);
     color:var(--text);
     font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing:antialiased;
     line-height:1.65;
+    overflow-wrap:break-word;
   }
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
@@ -83,10 +88,11 @@
 
   .article-header{padding:12px 0 30px;}
   .article-header h1{
-    font-family:'Lora', Georgia, serif;
-    font-weight:500;
-    font-size:clamp(30px, 5vw, 42px);
-    line-height:1.18;
+    font-family:'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight:800;
+    letter-spacing:-0.015em;
+    font-size:clamp(32px, 5.5vw, 46px);
+    line-height:1.1;
     margin:0 0 18px;
   }
   .article-byline{
@@ -119,12 +125,12 @@
   .article-body{padding:36px 0 20px; font-size:16.5px; line-height:1.85; color:#DDDAD1;}
   .article-body p{margin:0 0 26px;}
   .article-body p:first-of-type::first-letter{
-    font-family:'Lora', Georgia, serif;
-    font-size:58px;
-    font-weight:500;
+    font-family:'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-size:56px;
+    font-weight:800;
     float:left;
-    line-height:0.85;
-    padding:6px 8px 0 0;
+    line-height:0.8;
+    padding:4px 8px 0 0;
     color:var(--text);
   }
   .article-body figure{margin:34px 0;}
@@ -158,7 +164,7 @@
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
 
   @media (max-width:600px){
-    .wrap{padding:0 22px;}
+    .wrap{padding:0 24px;}
     header{padding:22px 0;}
     nav{gap:18px;}
     .back-link{padding:16px 0;}
@@ -166,6 +172,10 @@
     .article-meta{gap:18px;}
     .article-body{padding:28px 0 16px; font-size:16px;}
     .article-body p:first-of-type::first-letter{font-size:48px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 18px;}
   }
 
   .reveal{
@@ -211,33 +221,35 @@
   <p class="full-version-note">For the full version, with images, embedded tweets, and visual breakdowns, read it on <a href="https://medium.com/@paultomisola/then-1t-g0t-crazy-64fc5c89c076" target="_blank" rel="noopener">Medium</a>.</p>
 
   <div class="article-body">
-    <p>There are albums you listen to in passing, like a casual fling, the kind where you enjoy the small, intoxicating bits of pleasure: the hot, steamy 3 a.m. sex that leaves you dazed, or the warmth of her breath grazing your face as you lie tangled in bed. A thrill so fleeting it disappears before you can be fully consumed by it. The same way you tear into a fat, creamy shawarma and devour it too fast to remember its taste.</p>
+    <p>There are albums you listen to in passing, like a casual fling, the kind where you enjoy the small, intoxicating bits of pleasure: like the 3 a.m. sex that leaves you dazed. A thrill so fleeting it disappears before you can be fully consumed by it.</p>
 
-    <p>You nibble on a kiss here, a hug there, one track, maybe two, maybe three, before it all slips out of your mind, drowned in the avalanche of underground gems and mainstream hits in your library.</p>
+    <p>Certain albums, however, are like that breathless lover who insists on being fully experienced. The kind who sits across from your essence and refuses to leave until you're living vicariously through them, until no other artist or sound can hold your attention. Every note, every lyric, every beat feels like discovering a fruit so sweet and intoxicating that you wonder how you ever settled for anything less.</p>
 
-    <p>Certain albums, however, are like that breathless lover who insists on being fully experienced, who sits across from your essence and refuses to leave until you're living vicariously through them, until no other artist or sound can hold your attention. Every note, every lyric, every beat feels like discovering a fruit so sweet, so intoxicating, you wonder how you ever settled for anything less.</p>
+    <p>Without a shred of exaggeration, no album in recent memory epitomizes this kind of spiritual hijack quite like Zaylevelten's <em>Then It Got Crazy</em>. If there's any body of work that understands the beautiful, disorienting, creative, almost maddening possession I've described, it's this one.</p>
 
-    <p>So when I insist that no album in recent memory epitomizes this level of spiritual hijack like Zaylevelten's <em>Then It Got Crazy</em>, I mean it without a shred of exaggeration. Because if there's any body of work that understands the beautiful, disorienting, creative, almost maddening possession I've painted thus far, it's this one.</p>
+    <p>I first encountered Zaylevelten out of a mix of sheer curiosity and mild irritation. It was sometime in mid-October, a quiet Sunday morning, and I was scrolling aimlessly through my Twitter feed when a barrage of tweets flooded my timeline. Random users were insisting, with an almost religious fervor, that he was the next big thing, that anyone not paying attention was an uncultured casual.</p>
 
-    <p>I first encountered Zaylevelten out of a mix of sheer curiosity and mild irritation. It was sometime in mid-October, a quiet Sunday morning, and I was scrolling aimlessly through my Twitter feed when a barrage of tweets flooded my timeline. Random users were insisting, with an almost religious fervor, that he was the next big thing, and that anyone not paying attention was an uncultured casual.</p>
+    <p>The forcefulness of it all rattled me more than the message itself. Soon enough, I was liking every slanderous quip directed at the frenzy, participating in a strange little counter-movement against an artist whose voice I had not yet heard.</p>
 
-    <p>The forcefulness of it all rattled me more than the message itself, and soon annoyance coursed through my veins. I found myself liking every slanderous quip directed at the frenzy, as if, in some perverse way, I were resisting the sudden wave of overwhelming hysteria that rattled me.</p>
+    <p>So, lying on my mattress, phone hovering above my face, I realised I already disliked him, an artist whose voice I had not yet heard. But curiosity has always been my undoing. Driven partly by defiance and partly by the need to understand what felt like collective gaslighting, I went looking for him. I wanted to see if all the online raving was truly deserving of his talent, or simply manipulation at its finest.</p>
 
-    <p>So, lying on my mattress, phone hovering above my face, I realized I already disliked him, an artist whose voice I had not yet heard. But curiosity has always been my undoing. So, driven partly by defiance and partly by the need to understand what felt like collective gaslighting, I went looking for him. I wanted to see if all the online raving was truly deserving of his talent, or simply manipulation at its finest.</p>
+    <p>I am not going to pretend otherwise: my first listen of Then It Got Crazy wasn't exactly a scintillating experience. The album felt dense, almost congested, as if too many ideas were erupting and demanding to be understood at once. Part of that chaos came from the sounds themselves; they were unfamiliar, a fusion of sounds I couldn't immediately recognise or sort into the mental drawers I usually rely on.</p>
 
-    <p>I am not going to pretend otherwise: my first listen of Then It Got Crazy wasn't exactly a scintillating experience. The album felt dense, almost congested, as if too many ideas were erupting, demanding to be understood all at once. Part of that chaos came from the sounds themselves; they were unfamiliar, a fusion of sounds I could not immediately recognize or sort into the mental drawers I'd usually rely on. I like to think of myself as someone with a wide appetite for music, someone who moves comfortably between alté, pop, reggae, and every genre in between. Yet this album resisted the easy convenience of classification. It kept slipping out of every frame I tried to put around it, as if the entire project was insisting on being experienced on its own terms.</p>
+    <p>I like to think of myself as someone with a voracious appetite for music. I listen to almost anything, so it surprised me how difficult it was to place this album.</p>
 
     <p>So I persisted.</p>
 
-    <p>Of course, a few tracks stood out on my first few listens, but I still couldn't understand the album's temperament. I needed time with it. By the third day, after listening to it several times, I began to unravel the patterns that had initially seemed chaotic. I could almost call it a trap album if not for the alté swagger and Afrobeat cadence that color standout tracks like Bali, Guide Pass, Idanski, and the rest. Even then, the trap roots remain obvious. On Yami, for instance, there are faint echoes of Playboi Carti. On Wenski, you can hear subtle Young Thug and Kendrick influences in the animated delivery, while on Idanski, he leans fully into his braggadocious element, a theme that recurs in tracks like Fly, Gbona, Pawon, Guide Pass, and Burti Vybes.</p>
+    <p>Of course, a few tracks stood out on my first few listens, but I still couldn't quite figure out what the album was trying to be. I needed time with it. By the third day, after listening to it several times, I began to pick up on the patterns that had initially seemed chaotic. I could almost call it a trap album, except for the alté swagger and Afrobeat cadence running through tracks like Bali, Guide Pass and Idanski. Even then, the trap roots remain obvious. On Yami, for instance, there are faint echoes of Playboi Carti. On Wenski, you can hear traces of Young Thug and Kendrick in the animated delivery, while Idanski sees him lean fully into his braggadocious side, a quality that runs through Fly, Gbona, Pawon, Guide Pass and Burti Vybes.</p>
 
-    <p>Zaylevelten is eccentric to the core, and that eccentricity shows up in everything he does. From his styling to his artwork to the sounds he produces, there's an off-kilter confidence that feels effortless. Pulling off something this experimental as an up-and-coming artist takes guts, especially in Nigeria, where trap isn't exactly a sought-after sound; it's niche, it's an acquired taste. So it's hardly surprising that critics have spared him no slander, tossing jungle-music accusations and dismissals his way. The beautiful thing, however, is that this project is already pushing trap deeper into the mainstream and breaking ground for other acts daring enough to follow.</p>
+    <p>Zaylevelten is eccentric to the core, and you can hear it in the music. It shows up in the way he dresses, the artwork, the beats, even in the way he delivers a line. There is an off-kilter confidence to it all that feels strangely effortless.</p>
 
-    <p>One aspect that kept pulling me back, listen after listen, was the lyrical quality of the project. I know some people may roll their eyes at that because the themes lean heavily into sex, drugs, fraud, and all the usual X-rated terrain. But what struck me beyond the message was the delivery and precision of it, his animated voice, the slang, the miniature wordplay, the sultry female voice whispering "Tenski save me" from time to time, the seamless switching from English to pidgin, the floaty melodies sitting on groovy percussion. Everything comes together in a way that gives the album an unusual freshness and a ridiculous replay value.</p>
+    <p>Pulling off something this experimental as an up-and-coming artist takes guts, especially in Nigeria, where trap isn't exactly a sought-after sound. So it's hardly surprising that critics have spared him no slander, from jungle-music accusations to outright dismissals. The beautiful thing, though, is that this project is pushing trap deeper into the mainstream and breaking ground for other acts daring enough to follow.</p>
+
+    <p>One thing that kept pulling me back, listen after listen, was the lyrical quality of the project. I know some people may roll their eyes at that because the themes lean heavily into sex, drugs, fraud and all the usual X-rated terrain. But what struck me was everything around the lyrics: the animated voice, the slang, the little bits of wordplay, the sultry female voice whispering "Tenski save me" every now and then, the seamless switches between English and pidgin, the floaty melodies sitting on groovy percussion. It all comes together in a way that feels oddly fresh.</p>
 
     <p>I was also genuinely drawn to the fact that he produced some of the beats himself. I mean, it is one thing to deliver in that fashion, but it is another entirely to build the sonic world you're performing in brick by brick. Learning that he created the beats on tracks like Bali, Gbona, Fly, and Pawon, among others, puts into perspective how instinctive all of this is for him, how much of a natural he is at this.</p>
 
-    <p>I could go on about how much of a masterpiece this album is, but to keep it real: Then It Got Crazy is, in my books, one of the best albums to drop this year. What's even wilder is that before all this, he released Before It Got Crazy, a precursor album, the calm before the storm, a subtle hint of the chaos to come. Looking back now, it's almost prophetic because things really did get crazy.</p>
+    <p>I could go on about how much of a masterpiece this album is, but to keep it real: Then It Got Crazy is, in my books, one of the best albums to drop this year. Even more impressive is that before all this, he released Before It Got Crazy, a precursor of sorts, the calm before the storm. Looking back now, it feels almost prophetic. Things really did get crazy.</p>
   </div>
 
   <hr class="rule">

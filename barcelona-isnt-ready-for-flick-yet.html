@@ -18,13 +18,18 @@
     --max-w: 760px;
   }
   *{box-sizing:border-box;}
+  html{overflow-x:hidden;}
+  img{max-width:100%; height:auto; display:block;}
   body{
     margin:0;
+    max-width:100vw;
+    overflow-x:hidden;
     background:var(--bg);
     color:var(--text);
     font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing:antialiased;
     line-height:1.65;
+    overflow-wrap:break-word;
   }
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
@@ -83,10 +88,11 @@
 
   .article-header{padding:12px 0 30px;}
   .article-header h1{
-    font-family:'Lora', Georgia, serif;
-    font-weight:500;
-    font-size:clamp(30px, 5vw, 42px);
-    line-height:1.18;
+    font-family:'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight:800;
+    letter-spacing:-0.015em;
+    font-size:clamp(32px, 5.5vw, 46px);
+    line-height:1.1;
     margin:0 0 18px;
   }
   .article-byline{
@@ -119,12 +125,12 @@
   .article-body{padding:36px 0 20px; font-size:16.5px; line-height:1.85; color:#DDDAD1;}
   .article-body p{margin:0 0 26px;}
   .article-body p:first-of-type::first-letter{
-    font-family:'Lora', Georgia, serif;
-    font-size:58px;
-    font-weight:500;
+    font-family:'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-size:56px;
+    font-weight:800;
     float:left;
-    line-height:0.85;
-    padding:6px 8px 0 0;
+    line-height:0.8;
+    padding:4px 8px 0 0;
     color:var(--text);
   }
   .article-body figure{margin:34px 0;}
@@ -158,7 +164,7 @@
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
 
   @media (max-width:600px){
-    .wrap{padding:0 22px;}
+    .wrap{padding:0 24px;}
     header{padding:22px 0;}
     nav{gap:18px;}
     .back-link{padding:16px 0;}
@@ -166,6 +172,10 @@
     .article-meta{gap:18px;}
     .article-body{padding:28px 0 16px; font-size:16px;}
     .article-body p:first-of-type::first-letter{font-size:48px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 18px;}
   }
 
   .reveal{
@@ -211,65 +221,55 @@
   <p class="full-version-note">For the full version – with images, embedded tweets, and visual breakdowns – read it on <a href="https://medium.com/@paultomisola/barcelona-isnt-ready-for-flick-yet-ab7ddfc06cc0" target="_blank" rel="noopener">Medium</a>.</p>
 
   <div class="article-body">
-    <p>After the sacking of Xavi Hernández, barely a month after he had been persuaded to remain in the role, FC Barcelona once again found themselves reaching for certainty in uncertain times. On 29 May 2024, the club appointed Hansi Flick as head coach, making him only the third German to take charge at the Camp Nou. It was a decision sold as ambition, a signal that Barcelona intended to re-establish themselves among Europe's elite.</p>
+    <p>After sacking Xavi Hernández, barely a month after convincing him to stay, Barcelona turned to Hansi Flick for certainty in uncertain times. On 29 May 2024, the German became only the third German manager to take charge of the club.</p>
 
-    <p>Flick arrived in Catalonia with a reputation forged in the furnace of high-intensity football and ruthless efficiency. His work at Bayern Munich, particularly in the Champions League, placed him among the most successful managers of the modern era. In sporting terms, his early tenure at Barcelona appeared to justify the optimism.</p>
+    <p>Flick arrived with quite the reputation. At Bayern Munich, he had built a team that played fast, pressed relentlessly and defended with an aggressive high line and, most importantly, won. His Champions League triumph in 2020 had already established him as one of Europe's elite coaches.</p>
 
-    <p>Barcelona in Flick's first season, collected three trophies, fell narrowly short of a Champions League final, and scored 174 goals across competitions, a striking output for a young and largely inexperienced squad that had struggled for consistency under the previous manager.</p>
+    <p><strong>The Flick Effect</strong></p>
+
+    <p>Barcelona, in Flick's first season, collected three trophies, fell narrowly short of a Champions League final and scored 173 goals in all competitions, a striking output for a young and largely inexperienced squad that had struggled for consistency under the previous manager.</p>
 
     <p>Yet the numbers, impressive as they are, do not paint the full picture.</p>
 
-    <p>Beneath the surface of all the on-pitch success lie the same old fractures that have haunted the club for years. Barcelona continues to operate under severe financial constraints, with an imbalanced squad and persistent institutional instability. Flick's immediate impact, rather than concealing these cracks, has only made them more visible.</p>
+    <p>The better Barcelona looked on the pitch, the more obvious the problems around them became.</p>
 
-    <p>Barcelona's financial situation remains the most significant obstacle to achieving long-term sporting stability. Years of overspending and deferred accountability, particularly during the Josep Maria Bartomeu era which ended in 2020, plunged the club into heavy debt. A record-defining wage bill, compounded by the sudden revenue collapse caused by the COVID-19 pandemic, collectively crippled Barcelona's ability to operate normally.</p>
+    <p><strong>The Same Old Problems</strong></p>
 
-    <p>These financial constraints have since manifested in well-documented registration struggles under La Liga's salary cap regulations, forcing the club into short-term solutions such as contract renegotiations, deferred payments, and opportunistic recruitment. While these measures may preserve competitiveness in the immediate sense, they unfortunately undermine sustainable squad planning.</p>
+    <p>Barcelona spent years living beyond their means, particularly under Josep Maria Bartomeu. Then came the pandemic, which only made an already ugly situation worse. By the time Bartomeu left in 2020, the club was drowning in debt and carrying a wage bill that left very little room to manoeuvre.</p>
 
-    <p>Hansi Flick, however, represents a managerial profile that demands the opposite conditions.</p>
+    <p>The problem is that Barcelona still have to live with the mess that has been created. La Liga's salary cap has made registrations a constant headache, forcing the club into short-term fixes like renegotiating contracts, deferring payments and squeezing whatever room they can find out of the market. It has kept them competitive, but it has made building the squad they actually need all the harder.</p>
 
-    <p>His football is among the most resource-intensive in the modern game. Built on relentless intensity, a precariously high defensive line, and the need to outscore opponents, it requires elite athletes, specialist profiles, and reliable depth across the squad for it to bear fruits.</p>
+    <p>Flick's football is physically and tactically demanding. It is built on relentless intensity, a high defensive line and a willingness to leave very little room for error. To make it work over an entire season, you need athleticism, the right profiles and, perhaps most importantly, depth. A luxury Barcelona can barely afford.</p>
 
-    <p>At Barcelona, such luxury cannot be afforded. The margins are so tight that every sporting decision must first satisfy accounting logic before any other logic.</p>
+    <p><strong>Making Do</strong></p>
 
-    <p>The result is a squad assembled under financial constraint, yet expected to compete at the level of clubs operating with far fewer limitations. This reality reinforces the structural mismatch between Flick's style and Barcelona's current situation.</p>
+    <p>Few examples illustrate this more clearly than the failure to replace Iñigo Martínez following his unprecedented contract termination in August 2025 to join Al Nassr.</p>
 
-    <p>While Barcelona's starting eleven may contain some of the finest technicians in world football, the drop-off beyond it is difficult to ignore, particularly in positions central to Flick's system.</p>
+    <p>Martínez had been a domineering presence alongside Pau Cubarsí, a crucial part of the high line Flick wants to play. Yet Barcelona neither prioritised nor, more frustratingly, could afford a like-for-like replacement, instead resorting to makeshift solutions, most recently deploying Gerard Martín in an unfamiliar role.</p>
 
-    <p>Few examples illustrate this more clearly than the failure to adequately replace Iñigo Martínez following his unexpected contract termination in August 2025 to join Al Nassr. Martínez had been a domineering presence alongside Pau Cubarsí, crucial to the execution of Flick's aggressive high line. Yet Barcelona neither prioritised nor, more importantly, could afford a like-for-like replacement, instead resorting to makeshift solutions, most recently deploying Gerard Martín in an unfamiliar role.</p>
+    <p>Ordinarily, a season like Flick's first would have been followed by serious reinforcement. Success, after all, is supposed to buy you support.</p>
 
-    <p>Ordinarily, Flick's unprecedented early success would have been followed by targeted reinforcement, aimed at elevating the squad from functional to competitive.</p>
+    <p>Instead, Barcelona came out of the 2025 summer window with Marcus Rashford on loan, Joan García as their only permanent first-team signing, and Roony Bardghji, who was initially expected to be more of a development project than an immediate solution.</p>
 
-    <p>Success, after all, is meant to buy support.</p>
+    <p><strong>When La Masia Becomes a Necessity</strong></p>
 
-    <p>Instead, Barcelona emerged from the 2024/25 window with Marcus Rashford on loan, Joan García as the only permanent first-team signing, and Roony Bardghji, a player initially earmarked for development rather than immediate contribution.</p>
+    <p>Barcelona have always leaned on their youth. La Masia has given the club some of its greatest players: Messi, Guardiola, Xavi, Iniesta, Busquets. Generation after generation, the academy has produced players capable of flourishing in Blaugrana colours.</p>
 
-    <p>The consequences of this have been dire, forcing Barcelona into a state of constant improvisation, with players like Eric García and Gerrard Martin having to cover multiple roles across the pitch. This makeshift approach exposes a simple truth: the squad cannot meet the physical and tactical demands of Flick's football, which relies on sustained pressing, repeated high-intensity actions, and defensive bravery that leaves little margin for error.</p>
+    <p>Today, though, that reliance feels less like a choice and more like necessity.</p>
 
-    <p>Injuries and fixture congestion have exposed the lack of reliable alternatives, forcing key players into extended runs of minutes. Without the needed squad balance, Flick's highly demanding system can blossom in the short term but will struggle to endure over the long haul.</p>
+    <p>Under Flick, it means asking very young players to take on enormous responsibility. Pau Cubarsí, still only 18, is expected to hold his own at the heart of an extremely aggressive defensive line, where one mistimed step can leave an entire defence exposed.</p>
 
-    <p>These limitations will only be magnified looking ahead: Barcelona still require a left-sided centre-back, a defensive midfielder capable of becoming their athletic spine, reinforcement at full-back, and a centre-forward to lead the line heading into the 2026 summer window. In a World Cup year, with fixture congestion and physical demands at their peak, these gaps are set to become decisive.</p>
+    <p>How is that fair? At what other club is this normal?</p>
 
-    <p>Barcelona have always leaned on their youth. La Masia remains the centrepiece of the club's identity. Messi. Guardiola. Xavi. Enrique. Generations of players who inscribed their names into footballing history.</p>
+    <p><strong>Flick Can Only Do So Much</strong></p>
 
-    <p>Today, however, that reliance feels more like necessity.</p>
+    <p>Of course, Flick has already shown that he can get an awful lot out of this squad. Three trophies and 173 goals in his first season are hardly the numbers of a manager struggling to make things work. If anything, he has made Barcelona's limitations easier to overlook.</p>
 
-    <p>Under Flick, young inexperienced players are asked to step into massive shoes that stretch far beyond their years of experience, often in high-pressure European fixtures. Pau Cubarsí, at just 18, is not only expected to defend flawlessly, where a single error can prove decisive, but to operate as a cornerstone of the highest defensive line in Europe.</p>
+    <p>The better Flick does, the easier it becomes to forget what this squad is missing. He can squeeze more from his players, but he cannot create depth where there is none or turn every academy player into a finished product overnight.</p>
 
-    <p>How is that fair? At what club is this normal?</p>
+    <p>Barcelona still need a left-sided centre-back, a defensive midfielder, more depth at full-back and a centre-forward to lead the line heading into the 2026 summer window.</p>
 
-    <p>The reliance on La Masia graduates such as Fermín López, Casadó, Cubarsí, Lamine Yamal, etc. highlights both their overwhelming potential and the weight of expectation placed upon young, still-forming shoulders.</p>
-
-    <p>Flick's football is immediate and results-driven, demanding players who can sustain peak intensity day after day across competitions – a level of consistency that youth, however gifted, rarely provides in the short term.</p>
-
-    <p>Yet Barcelona's financial limitations leaves them no alternatives. With reinforcement seemingly out of reach, Flick is forced to develop talent in real time, improvising on the pitch rather than reinforcing off it. And so, a club historically built on nurturing potential now asks its youth to shoulder burdens that even fully resourced squads would struggle to manage.</p>
-
-    <p>Some might argue that Flick's very presence could be a stabilising force. After all, three trophies and 147 goals show he can deliver results even under the mightiest constraints. Perhaps his tactical acumen and winning mentality can accelerate youth development, turning promising players into ready-made performers faster than usual.</p>
-
-    <p>However, short-term results cannot close the gap between a manager's ambitions and the club's capacity to support them. Flick's winning culture may temporarily paper over these cracks, but it cannot compensate for the stability or sustainable investment the club still lacks.</p>
-
-    <p>In other words, results now do not erase the gap between managerial ambition and institutional readiness. Until these foundations are addressed, even the most accomplished coach is asked to perform miracles – to turn water into wine.</p>
-
-    <p>Barcelona may have a Flick on the touchline, but in reality, the club is still catching up to him.</p>
+    <p>Flick has already shown Barcelona what this team can be. The question now is whether the club can give him the squad to sustain it.</p>
   </div>
 
   <hr class="rule">

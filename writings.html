@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Writing &amp; Videos — Paul Tomisola</title>
+<title>Writing &amp; Videos – Paul Tomisola</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -17,13 +17,18 @@
     --max-w: 760px;
   }
   *{box-sizing:border-box;}
+  html{overflow-x:hidden;}
+  img{max-width:100%; height:auto; display:block;}
   body{
     margin:0;
+    max-width:100vw;
+    overflow-x:hidden;
     background:var(--bg);
     color:var(--text);
     font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing:antialiased;
     line-height:1.65;
+    overflow-wrap:break-word;
   }
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
@@ -87,7 +92,7 @@
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
 
   @media (max-width:600px){
-    .wrap{padding:0 22px;}
+    .wrap{padding:0 24px;}
     header{padding:22px 0;}
     nav{gap:18px;}
     .intro{padding:36px 0 8px;}
@@ -96,6 +101,10 @@
     .category-head{padding:16px 0 10px;}
     .piece{flex-wrap:wrap; padding:26px 0;}
     .piece-meta{text-align:left;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 18px;}
   }
 
   .reveal{opacity:0; transform:translateY(14px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);}
@@ -118,7 +127,7 @@
 
 <section class="intro wrap reveal">
   <h1>Writing &amp; Videos</h1>
-  <p>The full archive — football, music, culture, and essays on Medium, alongside video work. 🦉</p>
+  <p>The full archive – football, music, culture, and essays on Medium, alongside video work. 🦉</p>
   <div class="tabs">
     <button class="tab-btn active" data-tab="football">Football <sup>9</sup></button>
     <button class="tab-btn" data-tab="music">Music <sup>4</sup></button>
@@ -166,7 +175,7 @@
   </a>
   <a class="piece" href="https://medium.com/@paultomisola/barcelona-isnt-ready-for-flick-yet-ab7ddfc06cc0" target="_blank" rel="noopener">
     <span class="piece-dot"></span>
-    <span class="piece-body"><p class="piece-title">Barcelona Isn't Ready for Flick—Yet</p><p class="piece-desc">On the gap between Barça and Flick.</p></span>
+    <span class="piece-body"><p class="piece-title">Barcelona Isn't Ready for Flick–Yet</p><p class="piece-desc">On the gap between Barça and Flick.</p></span>
     <span class="piece-meta">Medium</span>
   </a>
   <a class="piece" href="https://medium.com/@paultomisola/a-case-for-rafael-le%C3%A3o-as-the-ideal-left-wing-option-for-barcelona-and-why-he-could-be-the-answer-5b10fe768b90" target="_blank" rel="noopener">
@@ -186,7 +195,7 @@
 
   <a class="piece" href="https://medium.com/@paultomisola/taves-popstar-is-a-breath-of-fresh-air-941ca708a3cd" target="_blank" rel="noopener">
     <span class="piece-dot"></span>
-    <span class="piece-body"><p class="piece-title">Taves' Popstar Is a Breath of Fresh Air</p><p class="piece-desc">A track-by-track review of Popstar — Side A.</p></span>
+    <span class="piece-body"><p class="piece-title">Taves' Popstar Is a Breath of Fresh Air</p><p class="piece-desc">A track-by-track review of Popstar – Side A.</p></span>
     <span class="piece-meta">Medium</span>
   </a>
   <a class="piece" href="https://medium.com/@paultomisola/a-framework-for-critically-engaging-music-projects-through-bnxns-captain-ae0e587eb69b" target="_blank" rel="noopener">
@@ -258,7 +267,7 @@
   </a>
   <a class="piece" href="https://paultomisola.substack.com/p/there-was-a-man-of-double-deed" target="_blank" rel="noopener">
     <span class="piece-dot"></span>
-    <span class="piece-body"><p class="piece-title">A Man of Double Deed</p><p class="piece-desc">Built around the Macbeth line — "'twas death and death indeed."</p></span>
+    <span class="piece-body"><p class="piece-title">A Man of Double Deed</p><p class="piece-desc">Built around the Macbeth line – "'twas death and death indeed."</p></span>
     <span class="piece-meta">Substack</span>
   </a>
   <a class="piece" href="https://medium.com/@paultomisola/3-18-in-aj-city-d9f67a9b34ba" target="_blank" rel="noopener">
