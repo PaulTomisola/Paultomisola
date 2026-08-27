@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcelona Isn't Ready for Flick–Yet – Paul Tomisola</title>
+<meta name="description" content="Barcelona's financial reality and squad limitations mean the club is not yet structurally prepared for the demands of Hansi Flick's football.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17140F;
+    --text: #EDEAE2;
+    --muted: #9C9A92;
+    --rule: rgba(255,255,255,0.16);
+    --accent: #D9A441;
+    --max-w: 760px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+  .serif{font-family:'Lora', Georgia, serif;}
+
+  .label{
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  header{padding:28px 0;}
+  header .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  .brand{
+    font-family:'Lora', Georgia, serif;
+    font-size:15px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  nav{display:flex; gap:26px;}
+  nav a{
+    position:relative;
+    font-size:14.5px;
+    text-decoration:none;
+    color:var(--muted);
+    transition:color .3s cubic-bezier(.4,0,.2,1);
+    padding-bottom:3px;
+  }
+  nav a::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:0;
+    width:100%; height:1px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .35s cubic-bezier(.4,0,.2,1);
+  }
+  nav a:hover::after, nav a:focus-visible::after{transform:scaleX(1); transform-origin:left;}
+  nav a:hover, nav a:focus-visible{color:var(--text);}
+
+  hr.rule{border:none; border-top:1px solid var(--rule); margin:0;}
+
+  .back-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--muted); text-decoration:none; padding:20px 0;
+    transition:color .2s ease;
+  }
+  .back-link:hover, .back-link:focus-visible{color:var(--accent);}
+
+  .article-header{padding:12px 0 30px;}
+  .article-header h1{
+    font-family:'Lora', Georgia, serif;
+    font-weight:500;
+    font-size:clamp(30px, 5vw, 42px);
+    line-height:1.18;
+    margin:0 0 18px;
+  }
+  .article-byline{
+    font-family:'Lora', Georgia, serif;
+    font-style:italic;
+    font-size:14.5px;
+    color:var(--muted);
+    margin:0 0 22px;
+  }
+  .article-byline a{
+    color:var(--muted);
+    text-decoration:underline;
+    text-decoration-color:var(--rule);
+    text-underline-offset:2px;
+    transition:color .2s ease;
+  }
+  .article-byline a:hover, .article-byline a:focus-visible{color:var(--accent); text-decoration-color:var(--accent);}
+
+  .article-meta{display:flex; gap:22px; flex-wrap:wrap; padding-top:6px;}
+  .article-meta div .label{margin-bottom:6px;}
+  .article-meta div p{margin:0; font-size:14.5px;}
+
+  .full-version-note{
+    font-size:13.5px; color:var(--muted); padding:24px 0 0; margin:0 0 -12px;
+    border-left:2px solid var(--rule); padding-left:16px;
+  }
+  .full-version-note a{color:var(--accent); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .full-version-note a:hover, .full-version-note a:focus-visible{text-decoration-color:var(--accent);}
+
+  .article-body{padding:36px 0 20px; font-size:16.5px; line-height:1.85; color:#DDDAD1;}
+  .article-body p{margin:0 0 26px;}
+  .article-body p:first-of-type::first-letter{
+    font-family:'Lora', Georgia, serif;
+    font-size:58px;
+    font-weight:500;
+    float:left;
+    line-height:0.85;
+    padding:6px 8px 0 0;
+    color:var(--text);
+  }
+  .article-body figure{margin:34px 0;}
+  .article-body figcaption{
+    font-size:12.5px; color:var(--muted); margin-top:10px;
+    letter-spacing:0.02em;
+  }
+  .article-body em{font-style:italic; color:var(--text);}
+  .article-body strong{font-weight:600; color:var(--text);}
+
+  .see-also{padding:28px 0 8px;}
+  .see-also .label{margin-bottom:14px;}
+  .see-also-links{display:flex; flex-wrap:wrap; gap:10px 20px;}
+  .see-also-links a{
+    font-size:14.5px; text-decoration:none; color:var(--text);
+    border-bottom:1px solid var(--rule); padding-bottom:2px;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .see-also-links a:hover, .see-also-links a:focus-visible{color:var(--accent); border-color:var(--accent);}
+
+  .article-footer{padding:28px 0 56px;}
+  .source-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14px; text-decoration:none;
+    color:var(--accent); border-bottom:1px solid var(--accent); padding-bottom:3px;
+    transition:opacity .2s ease;
+  }
+  .source-link:hover, .source-link:focus-visible{opacity:0.75;}
+
+  footer{padding:24px 0 40px;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:600px){
+    .wrap{padding:0 22px;}
+    header{padding:22px 0;}
+    nav{gap:18px;}
+    .back-link{padding:16px 0;}
+    .article-header{padding:8px 0 24px;}
+    .article-meta{gap:18px;}
+    .article-body{padding:28px 0 16px; font-size:16px;}
+    .article-body p:first-of-type::first-letter{font-size:48px;}
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Paul Tomisola</a>
+    <nav>
+      <a href="../writings.html">Writing</a>
+      <a href="../elsewhere.html">Elsewhere</a>
+    </nav>
+  </div>
+</header>
+<hr class="rule">
+
+<div class="wrap">
+  <a class="back-link" href="../writings.html">← Back to writing</a>
+</div>
+
+<article class="wrap reveal">
+  <div class="article-header">
+    <h1>A Framework for Engaging Music Through Bnxn's <em>Captain</em></h1>
+    <p class="article-byline">Originally published on <a href="https://medium.com/@paultomisola/a-framework-for-critically-engaging-music-projects-through-bnxns-captain-ae0e587eb69b" target="_blank" rel="noopener">Medium</a></p>
+    <div class="article-meta">
+      <div><div class="label">Status</div><p>Published, Jul 2025</p></div>
+      <div><div class="label">Genre</div><p>Music criticism</p></div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <p class="full-version-note">For the full version – with images, embedded tweets, and visual breakdowns – read it on <a href="https://medium.com/@paultomisola/a-framework-for-critically-engaging-music-projects-through-bnxns-captain-ae0e587eb69b" target="_blank" rel="noopener">Medium</a>.</p>
+
+  <div class="article-body">
+    <p>Reviewing any body of work, whether cinema, music, or art, is not an invitation to wage war against the art or artist for the sake of applause. That in itself is glory hunting and clout chasing dressed up as insightful analysis.</p>
+
+    <p>True reviewing, and music writing like all responsible journalism, must sit at the intersection of emotional fidelity and intellectual rigor. That is, it must attempt to document both how a project made you feel and why it might have made you feel that way. In essence, music journalism is your personal emotional interaction with the project and your intellectual analysis of it. Yet much of today's music writing either leans into surface-level analysis or falls flat in soulless pseudo-objectivity.</p>
+
+    <p>The arrival of <em>Captain</em>, the sophomore album from Daniel Benson, popularly known as Bnxn, on the 2nd of July, 2025, plunged me into a fever loop of obsessive replays, one with meticulous note-taking, and immersive listening. It wasn't just that I enjoyed the album, the sounds spoke to me in ways I found too meaningful not to write about and share. And so, despite never having written a proper review before, I found myself tangled in a longing to translate and interpret the sounds I was hearing – first for myself, then for others.</p>
+
+    <p>This longing came with its fair share of burdensome questions. How do I write clearly about what I can only feel instinctively? How do I know my judgment is fair, and what are the strengths behind my justification?</p>
+
+    <p>These and many more questions gnawed at my subconscious, eventually leading me to the core inquiry this essay attempts to explore: Can I build a structured, reflective framework for listening to albums that balances both emotional interaction and insightful analysis? How do I apply such a framework without flattening the music or over-intellectualizing it?</p>
+
+    <p>In an attempt to bridge the gap between the feelings I experienced while listening to Captain and the precise language needed to explain them coherently, I began tracking my own listening process by noting things that caught my attention, from fragments of sounds and emotion to recurring patterns, first as isolated observations. Over time, these standalone notes began to connect, and from what once felt like disoriented footnotes and scattered thoughts in my journal emerged a deeper sense of connection, one that birthed a more coherent framework.</p>
+
+    <p>This essay proposes a clear and flexible framework for reviewing music projects, one that balances emotional interaction and intellectual analysis into meaningful commentary, and then puts it to work on Benson's Captain.</p>
+
+    <p>An artist, upcoming or established, just released a music project on New Music Friday. As an editor for a column in your newspaper or magazine, you receive a flash drive containing a complete compilation of the artist's discography, biography, and their new project. How do you go about reviewing it?</p>
+
+    <p>This flash drive forces a series of questions, ones that any thoughtful reviewer must consider before writing.</p>
+
+    <p><strong>Artist Context:</strong> Where is the artist in their career arc, and what's their trajectory like? What expectations, personal, public, or critical, surround this release?</p>
+
+    <p><strong>Body of Work:</strong> How well-crafted is the project? What do the production choices, song structures, transitions, and sonic palette reveal about intention of the art and motion?</p>
+
+    <p><strong>Lyrical &amp; Thematic Intention:</strong> What is the project trying to say, and how clearly or consistently does it say it? What recurring motifs, patterns, or thematic threads emerge?</p>
+
+    <p><strong>Cultural &amp; Genre Placement:</strong> How does the album sit within its genre and culture? Does the album transcend boundaries, pay homage to a particular sound or tradition, or build on familiar territory?</p>
+
+    <p><strong>Forecasting &amp; Longevity:</strong> Will this project age well? Can it stand the test of time, or does it feel momentary?</p>
+
+    <p>Having laid out this framework, I now turn to Benson's Captain to engage with it more intentionally. By approaching the project through each of these lenses, I aim to translate the emotional intensity of my listening experience into a structured, coherent commentary on what this album is, what it signifies, and where it might be headed.</p>
+
+    <p><strong>Artist Context</strong></p>
+
+    <p>Formerly known as Buju, Daniel Etiese Benson, professionally Bnxn (pronounced Benson), is a singer, songwriter, and producer whose rise to global stardom has been anything but ordinary.</p>
+
+    <p>For an artist who quite literally pulled himself out of the hustling, bustling Gbagada and the murky waters of the outskirt of Mowe, a rural town in Lagos he once described as a place "where it was hard to dream," his growth has been rapid, hard-earned, and beautiful to watch.</p>
+
+    <p>The earliest signs of his talent emerged in 2019, when he gained attention through standout features with Zlatan, Show Dem Camp, and eventually Wizkid with Mood in 2020. Tied to a distribution deal with EMPIRE, he was required to release two EPs before delivering his debut album, Sincerely, Benson.</p>
+
+    <p>Across his earlier solo projects and high-profile collaborations, Benson's range, lyrical dexterity, and sonic flair were already evident. But critically, these projects lacked cohesion in the sense that there was no clear narrative or emotional arc anchoring them. Sorry I'm Late, for instance, touched on themes of hustle, gratitude, and ambition, but these ideas sat side by side like a collection of singles rather than evolving or deepening across the project. As a result, it often felt more like a playlist of feel-good singles than a unified artistic statement.</p>
+
+    <p><strong>Body of Work</strong></p>
+
+    <p>With Captain, the stakes are quite different for Benson. There's less pressure to prove he can actually sing or deliver hits, and more pressure to reveal his essence without the support of big-name co-signs or algorithm-driven singles. This album isn't the beginning or the end of his journey, but rather a career defining moment, one that asks whether he can fully exhibit his own voice, flair, and style, while still commanding attention at pop scale.</p>
+
+    <p>What stands out most while listening to Captain is the complete intentionality of it. As a body of work, it feels more grounded and purposeful than anything else in his discography so far. The songs bleed into each other naturally, like chapters in a story.</p>
+
+    <p>The project opens with a warm, summery glow through tracks like I Alone, Set Up, Cutesy, and Jies. From there, the album deepens into its African roots and influences, with Eleyi, Very Soon, Captain, and Yes Sir delivering dancehall-inflected rhythms rich with Afrobeats DNA. The third section takes the energy up a notch with more urgent tracks like Fikan We Kan and Laye Mi, and finally, the project winds down into a prayerful and melancholic mood where Benson seems to float over the beat, fully immersed in his essence.</p>
+
+    <p>One of the most profound moments of the album's listening experience arrives in the transition from Eleyi to Captain. The shift is so seamless, it's almost as if the two songs were born from the same session. Some listeners attribute this to the overlapping audio of Captain's intro tacked onto the end of Eleyi, but it goes beyond that. These tracks are two halves of a singular idea, and one wouldn't be complete without the other. On Eleyi, he eulogizes himself by flexing his influence and presence in the Nigerian pop scene. On Captain, he reinforces that flex with more reflective and introspection. Together, these two tracks serve as the album's Goldilocks zone and anchor.</p>
+
+    <p>Production-wise, Captain strikes a balance between groove and melancholy, often pairing lively, even drill-influenced percussion with soft, psychedelic keys and echoing vocals. Even in his more boastful moments, the mood remains introspective, floaty, airy, and deliberate.</p>
+
+    <p>There's a sonic palette of vocal loops and pockets of sounds he returns to throughout the album, and while some of this might come off as monotonous, it's clear the repetition is essential for creating the rhythm needed for the cohesive, breathing quality of the album.</p>
+
+    <p><strong>Lyrical &amp; Thematic Intention</strong></p>
+
+    <p>Beyond just a title, Captain serves as a metaphor for complete control. It is a declaration of authorship over craft, destiny, and identity. With this project, Benson is essentially saying: I built this brick by brick, and now I'm steering the ship and enjoying the rewards at the highest level.</p>
+
+    <p>Even on songs that show vulnerability, he doesn't shy away from celebrating himself, often doing so in some of the most sonically creative ways.</p>
+
+    <p>Across the album, Benson basks in self-confidence through standout lines on Set Up, Eleyi, Captain, and 5 Hours Till Nairobi, each asserting his place and dismissing his doubters.</p>
+
+    <p>While some parts of the album embraces a hedonistic celebration of life, it doesn't ignore pain, sadness or vulnerability. On tracks like I Alone, In Jesus Name, and Cough Syrup, Benson bleeds his emotions unto the canvas of the album. In Jesus Name stands out as he touches on the passing of his mother, possibly for the first time on a track.</p>
+
+    <p>There is also a recurring sense that Benson sees himself as still on the journey, far from his final form or highest point, hence the name Captain. Throughout the album, he hints that he hasn't arrived yet, which adds a sense of ambition and hunger that complements the confidence and bravado in his lyrics.</p>
+
+    <p>The album artwork depicts Benson surrounded by sixteen soldiers – an image that doesn't just impress visually but also reinforces the album's core themes. The number sixteen recurs throughout the project, from the sixteen-track list to one of its eeriest verses on 5 Hours Till Nairobi, where he recalls a dream involving sixteen witches offering sixteen wishes.</p>
+
+    <p>Later, in a Twitter Space, Benson clarified that these "witches" did not seem evil because they spoke to him in the kindest and gentlest way. This repaints the temptation in a more nuanced way as something seductive rather than sinister or horrifying.</p>
+
+    <p>Benson also shows he's very much aware of social media trends, with tongue-in-cheek references sprinkled across the project, alongside playful nods to his peers.</p>
+
+    <p>Being a captain isn't merely about confidence but also about groundedness, especially on a spiritual level. Throughout the album, Benson leans into prayerful or gospel-inspired lines, which in turn gives the project emotional and spiritual depth.</p>
+
+    <p>What brings it all together is Benson's remarkable musical intelligence. Unlike many artists who focus solely on making hits, he creates boldly for listeners who crave deeper engagement. He lives up to his self-image as an alum of the Nigerian music academy – a student of the art who builds on legacy with an instinctive ear for what great music should sound like. His interpolations and samples connect his work to a broader cultural and sonic universe.</p>
+
+    <p><strong>Cultural &amp; Genre Placement</strong></p>
+
+    <p>Captain combines genres like Afrobeats, dancehall, alte, gospel, Amapiano, R&amp;B, and even Fuji into a cohesive, emotionally resonant whole. The production is adventurous, deliberately avoiding predictable trends in favor of bold, instinctive experimentation. Unlike some artists who have openly distanced themselves from the local audience to chase bigger markets, Benson prioritizes culture and community at the heart of his music, creating an album that invites everyone to find their own sweet spot within it.</p>
+
+    <p><strong>Forecasting &amp; Longevity</strong></p>
+
+    <p>Now, having written all of this, the big question remains: Will Captain stand the test of time? And the answer is quite simple – yes, it will.</p>
+
+    <p>The depth, adventurous production, vivid storytelling, and relatability of the project suggest it will continue to make waves for years to come. While the album boasts of tracks that are immediate hits, its true strength lies in its replay value and emotional layers that reveal themselves slowly, over time.</p>
+
+    <p>So it's safe to say that Benson's Captain isn't just a fleeting pop statement built on a house of cards. It's a project with staying power, one that, all things being equal, will be remembered and revered in the industry for years to come.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="see-also">
+    <div class="label">See also</div>
+    <div class="see-also-links">
+      <a href="on-debuts-and-becoming.html">On Debuts and Becoming: A Conversation with Wole Newjuice</a>
+      <a href="https://medium.com/@paultomisola/then-1t-g0t-crazy-64fc5c89c076" target="_blank" rel="noopener">then 1t g0t Crazy</a>
+      <a href="https://medium.com/@paultomisola/odumodublvck-the-misunderstood-genius-dd55d63897bc" target="_blank" rel="noopener">ODUMODUBLVCK: The Misunderstood Genius</a>
+    </div>
+  </div>
+
+  <div class="article-footer">
+    <a class="source-link" href="https://medium.com/@paultomisola/a-framework-for-critically-engaging-music-projects-through-bnxns-captain-ae0e587eb69b" target="_blank" rel="noopener">Originally published on Medium ↗</a>
+  </div>
+</article>
+
+<hr class="rule">
+<footer>
+  <div class="wrap">
+    <span class="label">Lagos, Nigeria</span>
+    <span class="label">© 2026 Paul Tomisola</span>
+  </div>
+</footer>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>

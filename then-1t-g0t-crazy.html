@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcelona Isn't Ready for Flick–Yet – Paul Tomisola</title>
+<meta name="description" content="Barcelona's financial reality and squad limitations mean the club is not yet structurally prepared for the demands of Hansi Flick's football.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17140F;
+    --text: #EDEAE2;
+    --muted: #9C9A92;
+    --rule: rgba(255,255,255,0.16);
+    --accent: #D9A441;
+    --max-w: 760px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+  .serif{font-family:'Lora', Georgia, serif;}
+
+  .label{
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  header{padding:28px 0;}
+  header .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  .brand{
+    font-family:'Lora', Georgia, serif;
+    font-size:15px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  nav{display:flex; gap:26px;}
+  nav a{
+    position:relative;
+    font-size:14.5px;
+    text-decoration:none;
+    color:var(--muted);
+    transition:color .3s cubic-bezier(.4,0,.2,1);
+    padding-bottom:3px;
+  }
+  nav a::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:0;
+    width:100%; height:1px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .35s cubic-bezier(.4,0,.2,1);
+  }
+  nav a:hover::after, nav a:focus-visible::after{transform:scaleX(1); transform-origin:left;}
+  nav a:hover, nav a:focus-visible{color:var(--text);}
+
+  hr.rule{border:none; border-top:1px solid var(--rule); margin:0;}
+
+  .back-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--muted); text-decoration:none; padding:20px 0;
+    transition:color .2s ease;
+  }
+  .back-link:hover, .back-link:focus-visible{color:var(--accent);}
+
+  .article-header{padding:12px 0 30px;}
+  .article-header h1{
+    font-family:'Lora', Georgia, serif;
+    font-weight:500;
+    font-size:clamp(30px, 5vw, 42px);
+    line-height:1.18;
+    margin:0 0 18px;
+  }
+  .article-byline{
+    font-family:'Lora', Georgia, serif;
+    font-style:italic;
+    font-size:14.5px;
+    color:var(--muted);
+    margin:0 0 22px;
+  }
+  .article-byline a{
+    color:var(--muted);
+    text-decoration:underline;
+    text-decoration-color:var(--rule);
+    text-underline-offset:2px;
+    transition:color .2s ease;
+  }
+  .article-byline a:hover, .article-byline a:focus-visible{color:var(--accent); text-decoration-color:var(--accent);}
+
+  .article-meta{display:flex; gap:22px; flex-wrap:wrap; padding-top:6px;}
+  .article-meta div .label{margin-bottom:6px;}
+  .article-meta div p{margin:0; font-size:14.5px;}
+
+  .full-version-note{
+    font-size:13.5px; color:var(--muted); padding:24px 0 0; margin:0 0 -12px;
+    border-left:2px solid var(--rule); padding-left:16px;
+  }
+  .full-version-note a{color:var(--accent); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .full-version-note a:hover, .full-version-note a:focus-visible{text-decoration-color:var(--accent);}
+
+  .article-body{padding:36px 0 20px; font-size:16.5px; line-height:1.85; color:#DDDAD1;}
+  .article-body p{margin:0 0 26px;}
+  .article-body p:first-of-type::first-letter{
+    font-family:'Lora', Georgia, serif;
+    font-size:58px;
+    font-weight:500;
+    float:left;
+    line-height:0.85;
+    padding:6px 8px 0 0;
+    color:var(--text);
+  }
+  .article-body figure{margin:34px 0;}
+  .article-body figcaption{
+    font-size:12.5px; color:var(--muted); margin-top:10px;
+    letter-spacing:0.02em;
+  }
+  .article-body em{font-style:italic; color:var(--text);}
+  .article-body strong{font-weight:600; color:var(--text);}
+
+  .see-also{padding:28px 0 8px;}
+  .see-also .label{margin-bottom:14px;}
+  .see-also-links{display:flex; flex-wrap:wrap; gap:10px 20px;}
+  .see-also-links a{
+    font-size:14.5px; text-decoration:none; color:var(--text);
+    border-bottom:1px solid var(--rule); padding-bottom:2px;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .see-also-links a:hover, .see-also-links a:focus-visible{color:var(--accent); border-color:var(--accent);}
+
+  .article-footer{padding:28px 0 56px;}
+  .source-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14px; text-decoration:none;
+    color:var(--accent); border-bottom:1px solid var(--accent); padding-bottom:3px;
+    transition:opacity .2s ease;
+  }
+  .source-link:hover, .source-link:focus-visible{opacity:0.75;}
+
+  footer{padding:24px 0 40px;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:600px){
+    .wrap{padding:0 22px;}
+    header{padding:22px 0;}
+    nav{gap:18px;}
+    .back-link{padding:16px 0;}
+    .article-header{padding:8px 0 24px;}
+    .article-meta{gap:18px;}
+    .article-body{padding:28px 0 16px; font-size:16px;}
+    .article-body p:first-of-type::first-letter{font-size:48px;}
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Paul Tomisola</a>
+    <nav>
+      <a href="../writings.html">Writing</a>
+      <a href="../elsewhere.html">Elsewhere</a>
+    </nav>
+  </div>
+</header>
+<hr class="rule">
+
+<div class="wrap">
+  <a class="back-link" href="../writings.html">← Back to writing</a>
+</div>
+
+<article class="wrap reveal">
+  <div class="article-header">
+    <h1>then 1t g0t Crazy</h1>
+    <p class="article-byline">Originally published on <a href="https://medium.com/@paultomisola/then-1t-g0t-crazy-64fc5c89c076" target="_blank" rel="noopener">Medium</a></p>
+    <div class="article-meta">
+      <div><div class="label">Status</div><p>Published, Nov 2025</p></div>
+      <div><div class="label">Genre</div><p>Music criticism</p></div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <p class="full-version-note">For the full version, with images, embedded tweets, and visual breakdowns, read it on <a href="https://medium.com/@paultomisola/then-1t-g0t-crazy-64fc5c89c076" target="_blank" rel="noopener">Medium</a>.</p>
+
+  <div class="article-body">
+    <p>There are albums you listen to in passing, like a casual fling, the kind where you enjoy the small, intoxicating bits of pleasure: the hot, steamy 3 a.m. sex that leaves you dazed, or the warmth of her breath grazing your face as you lie tangled in bed. A thrill so fleeting it disappears before you can be fully consumed by it. The same way you tear into a fat, creamy shawarma and devour it too fast to remember its taste.</p>
+
+    <p>You nibble on a kiss here, a hug there, one track, maybe two, maybe three, before it all slips out of your mind, drowned in the avalanche of underground gems and mainstream hits in your library.</p>
+
+    <p>Certain albums, however, are like that breathless lover who insists on being fully experienced, who sits across from your essence and refuses to leave until you're living vicariously through them, until no other artist or sound can hold your attention. Every note, every lyric, every beat feels like discovering a fruit so sweet, so intoxicating, you wonder how you ever settled for anything less.</p>
+
+    <p>So when I insist that no album in recent memory epitomizes this level of spiritual hijack like Zaylevelten's <em>Then It Got Crazy</em>, I mean it without a shred of exaggeration. Because if there's any body of work that understands the beautiful, disorienting, creative, almost maddening possession I've painted thus far, it's this one.</p>
+
+    <p>I first encountered Zaylevelten out of a mix of sheer curiosity and mild irritation. It was sometime in mid-October, a quiet Sunday morning, and I was scrolling aimlessly through my Twitter feed when a barrage of tweets flooded my timeline. Random users were insisting, with an almost religious fervor, that he was the next big thing, and that anyone not paying attention was an uncultured casual.</p>
+
+    <p>The forcefulness of it all rattled me more than the message itself, and soon annoyance coursed through my veins. I found myself liking every slanderous quip directed at the frenzy, as if, in some perverse way, I were resisting the sudden wave of overwhelming hysteria that rattled me.</p>
+
+    <p>So, lying on my mattress, phone hovering above my face, I realized I already disliked him, an artist whose voice I had not yet heard. But curiosity has always been my undoing. So, driven partly by defiance and partly by the need to understand what felt like collective gaslighting, I went looking for him. I wanted to see if all the online raving was truly deserving of his talent, or simply manipulation at its finest.</p>
+
+    <p>I am not going to pretend otherwise: my first listen of Then It Got Crazy wasn't exactly a scintillating experience. The album felt dense, almost congested, as if too many ideas were erupting, demanding to be understood all at once. Part of that chaos came from the sounds themselves; they were unfamiliar, a fusion of sounds I could not immediately recognize or sort into the mental drawers I'd usually rely on. I like to think of myself as someone with a wide appetite for music, someone who moves comfortably between alté, pop, reggae, and every genre in between. Yet this album resisted the easy convenience of classification. It kept slipping out of every frame I tried to put around it, as if the entire project was insisting on being experienced on its own terms.</p>
+
+    <p>So I persisted.</p>
+
+    <p>Of course, a few tracks stood out on my first few listens, but I still couldn't understand the album's temperament. I needed time with it. By the third day, after listening to it several times, I began to unravel the patterns that had initially seemed chaotic. I could almost call it a trap album if not for the alté swagger and Afrobeat cadence that color standout tracks like Bali, Guide Pass, Idanski, and the rest. Even then, the trap roots remain obvious. On Yami, for instance, there are faint echoes of Playboi Carti. On Wenski, you can hear subtle Young Thug and Kendrick influences in the animated delivery, while on Idanski, he leans fully into his braggadocious element, a theme that recurs in tracks like Fly, Gbona, Pawon, Guide Pass, and Burti Vybes.</p>
+
+    <p>Zaylevelten is eccentric to the core, and that eccentricity shows up in everything he does. From his styling to his artwork to the sounds he produces, there's an off-kilter confidence that feels effortless. Pulling off something this experimental as an up-and-coming artist takes guts, especially in Nigeria, where trap isn't exactly a sought-after sound; it's niche, it's an acquired taste. So it's hardly surprising that critics have spared him no slander, tossing jungle-music accusations and dismissals his way. The beautiful thing, however, is that this project is already pushing trap deeper into the mainstream and breaking ground for other acts daring enough to follow.</p>
+
+    <p>One aspect that kept pulling me back, listen after listen, was the lyrical quality of the project. I know some people may roll their eyes at that because the themes lean heavily into sex, drugs, fraud, and all the usual X-rated terrain. But what struck me beyond the message was the delivery and precision of it, his animated voice, the slang, the miniature wordplay, the sultry female voice whispering "Tenski save me" from time to time, the seamless switching from English to pidgin, the floaty melodies sitting on groovy percussion. Everything comes together in a way that gives the album an unusual freshness and a ridiculous replay value.</p>
+
+    <p>I was also genuinely drawn to the fact that he produced some of the beats himself. I mean, it is one thing to deliver in that fashion, but it is another entirely to build the sonic world you're performing in brick by brick. Learning that he created the beats on tracks like Bali, Gbona, Fly, and Pawon, among others, puts into perspective how instinctive all of this is for him, how much of a natural he is at this.</p>
+
+    <p>I could go on about how much of a masterpiece this album is, but to keep it real: Then It Got Crazy is, in my books, one of the best albums to drop this year. What's even wilder is that before all this, he released Before It Got Crazy, a precursor album, the calm before the storm, a subtle hint of the chaos to come. Looking back now, it's almost prophetic because things really did get crazy.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="see-also">
+    <div class="label">See also</div>
+    <div class="see-also-links">
+      <a href="bnxns-captain-framework.html">A Framework for Engaging Music Through Bnxn's Captain</a>
+      <a href="https://medium.com/@paultomisola/odumodublvck-the-misunderstood-genius-dd55d63897bc" target="_blank" rel="noopener">ODUMODUBLVCK: The Misunderstood Genius</a>
+      <a href="on-debuts-and-becoming.html">On Debuts and Becoming</a>
+    </div>
+  </div>
+
+  <div class="article-footer">
+    <a class="source-link" href="https://medium.com/@paultomisola/then-1t-g0t-crazy-64fc5c89c076" target="_blank" rel="noopener">Originally published on Medium ↗</a>
+  </div>
+</article>
+
+<hr class="rule">
+<footer>
+  <div class="wrap">
+    <span class="label">Lagos, Nigeria</span>
+    <span class="label">© 2026 Paul Tomisola</span>
+  </div>
+</footer>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>

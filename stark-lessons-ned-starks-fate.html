@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcelona Isn't Ready for Flick–Yet – Paul Tomisola</title>
+<meta name="description" content="Barcelona's financial reality and squad limitations mean the club is not yet structurally prepared for the demands of Hansi Flick's football.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17140F;
+    --text: #EDEAE2;
+    --muted: #9C9A92;
+    --rule: rgba(255,255,255,0.16);
+    --accent: #D9A441;
+    --max-w: 760px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+  .serif{font-family:'Lora', Georgia, serif;}
+
+  .label{
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  header{padding:28px 0;}
+  header .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  .brand{
+    font-family:'Lora', Georgia, serif;
+    font-size:15px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  nav{display:flex; gap:26px;}
+  nav a{
+    position:relative;
+    font-size:14.5px;
+    text-decoration:none;
+    color:var(--muted);
+    transition:color .3s cubic-bezier(.4,0,.2,1);
+    padding-bottom:3px;
+  }
+  nav a::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:0;
+    width:100%; height:1px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .35s cubic-bezier(.4,0,.2,1);
+  }
+  nav a:hover::after, nav a:focus-visible::after{transform:scaleX(1); transform-origin:left;}
+  nav a:hover, nav a:focus-visible{color:var(--text);}
+
+  hr.rule{border:none; border-top:1px solid var(--rule); margin:0;}
+
+  .back-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--muted); text-decoration:none; padding:20px 0;
+    transition:color .2s ease;
+  }
+  .back-link:hover, .back-link:focus-visible{color:var(--accent);}
+
+  .article-header{padding:12px 0 30px;}
+  .article-header h1{
+    font-family:'Lora', Georgia, serif;
+    font-weight:500;
+    font-size:clamp(30px, 5vw, 42px);
+    line-height:1.18;
+    margin:0 0 18px;
+  }
+  .article-byline{
+    font-family:'Lora', Georgia, serif;
+    font-style:italic;
+    font-size:14.5px;
+    color:var(--muted);
+    margin:0 0 22px;
+  }
+  .article-byline a{
+    color:var(--muted);
+    text-decoration:underline;
+    text-decoration-color:var(--rule);
+    text-underline-offset:2px;
+    transition:color .2s ease;
+  }
+  .article-byline a:hover, .article-byline a:focus-visible{color:var(--accent); text-decoration-color:var(--accent);}
+
+  .article-meta{display:flex; gap:22px; flex-wrap:wrap; padding-top:6px;}
+  .article-meta div .label{margin-bottom:6px;}
+  .article-meta div p{margin:0; font-size:14.5px;}
+
+  .full-version-note{
+    font-size:13.5px; color:var(--muted); padding:24px 0 0; margin:0 0 -12px;
+    border-left:2px solid var(--rule); padding-left:16px;
+  }
+  .full-version-note a{color:var(--accent); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .full-version-note a:hover, .full-version-note a:focus-visible{text-decoration-color:var(--accent);}
+
+  .article-body{padding:36px 0 20px; font-size:16.5px; line-height:1.85; color:#DDDAD1;}
+  .article-body p{margin:0 0 26px;}
+  .article-body p:first-of-type::first-letter{
+    font-family:'Lora', Georgia, serif;
+    font-size:58px;
+    font-weight:500;
+    float:left;
+    line-height:0.85;
+    padding:6px 8px 0 0;
+    color:var(--text);
+  }
+  .article-body figure{margin:34px 0;}
+  .article-body figcaption{
+    font-size:12.5px; color:var(--muted); margin-top:10px;
+    letter-spacing:0.02em;
+  }
+  .article-body em{font-style:italic; color:var(--text);}
+  .article-body strong{font-weight:600; color:var(--text);}
+
+  .see-also{padding:28px 0 8px;}
+  .see-also .label{margin-bottom:14px;}
+  .see-also-links{display:flex; flex-wrap:wrap; gap:10px 20px;}
+  .see-also-links a{
+    font-size:14.5px; text-decoration:none; color:var(--text);
+    border-bottom:1px solid var(--rule); padding-bottom:2px;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .see-also-links a:hover, .see-also-links a:focus-visible{color:var(--accent); border-color:var(--accent);}
+
+  .article-footer{padding:28px 0 56px;}
+  .source-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14px; text-decoration:none;
+    color:var(--accent); border-bottom:1px solid var(--accent); padding-bottom:3px;
+    transition:opacity .2s ease;
+  }
+  .source-link:hover, .source-link:focus-visible{opacity:0.75;}
+
+  footer{padding:24px 0 40px;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:600px){
+    .wrap{padding:0 22px;}
+    header{padding:22px 0;}
+    nav{gap:18px;}
+    .back-link{padding:16px 0;}
+    .article-header{padding:8px 0 24px;}
+    .article-meta{gap:18px;}
+    .article-body{padding:28px 0 16px; font-size:16px;}
+    .article-body p:first-of-type::first-letter{font-size:48px;}
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Paul Tomisola</a>
+    <nav>
+      <a href="../writings.html">Writing</a>
+      <a href="../elsewhere.html">Elsewhere</a>
+    </nav>
+  </div>
+</header>
+<hr class="rule">
+
+<div class="wrap">
+  <a class="back-link" href="../writings.html">← Back to writing</a>
+</div>
+
+<article class="wrap reveal">
+  <div class="article-header">
+    <h1>Stark Lessons: Ned Stark's Fate as a Metaphor for Life</h1>
+    <p class="article-byline">Originally published on <a href="https://medium.com/@paultomisola/ned-starks-fate-as-a-metaphor-for-life-a-stark-lesson-from-game-of-thrones-1e93ef620b7b" target="_blank" rel="noopener">Medium</a></p>
+    <div class="article-meta">
+      <div><div class="label">Status</div><p>Published, Jun 2025</p></div>
+      <div><div class="label">Genre</div><p>Essay, pop culture</p></div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <p class="full-version-note">For the full version – with images, embedded tweets, and visual breakdowns – read it on <a href="https://medium.com/@paultomisola/ned-starks-fate-as-a-metaphor-for-life-a-stark-lesson-from-game-of-thrones-1e93ef620b7b" target="_blank" rel="noopener">Medium</a>.</p>
+
+  <div class="article-body">
+    <p>The good man perishes, while the schemer inherits the earth.</p>
+
+    <p>Despite the moans and groans about how it ended, Game of Thrones remains one of television's most groundbreaking creations and it'll stay that way for as long as time lasts. It is a fantasy world like no other. Great kingdoms rising and falling, royal households scheming, enormous swords clashing, dragons soaring through black skies. It was cinema at its highest form.</p>
+
+    <p>What made it such an unforgettable cinematic experience wasn't just the castles or the dragons, but the way it subverted expectations. Game of Thrones was a show that made you believe, and then punished you for it. The writers thrived on that cruel tension, keeping viewers perched on the edge of their seats, unafraid to kill beloved characters in ways so brutal and unforgettable they left audiences reeling.</p>
+
+    <p>Not every decision was perfect, a few were needless, others outright controversial, but the ones that landed perfectly or seamlessly changed the air around the show's pedigree. And nothing did more for the series' mythos than the death of Ned Stark in the ninth episode of the first season.</p>
+
+    <p>From the very first episode, Sean Bean was presented as the man, the protagonist whose integrity would anchor the story, the moral compass in a world of volatile alliances, treachery and greed. You believed him untouchable, the good man whose goodness would shield him. He was the knight, the father, the friend, the king you'd follow through a dark alley. And then, in one cold stroke, they took his head before the first season even finished.</p>
+
+    <p>We were raised to believe that heroes survive. That honor is armor. That good men win. Or so we were taught. Game of Thrones shattered that lie in the bluntest, most merciless way possible. Ned Stark, the man you deemed untouchable, the one whose decency you believed might fix a broken Westeros, knelt before the executioner's sword until it kissed his head and it was severed from his body.</p>
+
+    <p>Honestly, it was a traumatizing experience, and for what it's worth, I'd pay good money to watch people's live reactions the first time they saw that scene. The moment it sank in that no one was coming to save him.</p>
+
+    <p>Looking back now, the signs were always in plain sight. But you missed them, because you were too busy staring at the finger pointing to the moon, too blinded by your love for Ned to see the world he was in.</p>
+
+    <p>Ned Stark was a man of honor and integrity, and it was those very traits that made him hopelessly unfit for the ruthless jungle of King's Landing. He embodied every virtue that makes a great man, but those same virtues turned to liabilities in a world built on betrayal and corruption. In the Game of Thrones, you either play or you die, and Ned Stark didn't even see the game. Even if he had, he lacked the cunning, the mischief, the cold-blooded ruthlessness it demanded. He was a man already dead the moment he chose to play by rules no one else believed in.</p>
+
+    <p>He was a man of honor in a land ruled by shadows. A lion with no claws. A knight without a sword.</p>
+
+    <p>While this makes for a beautiful, gut-wrenching plot twist, it was more than just good storytelling. Ned's death was a metaphor, a lesson that was taught with blood, a cruel reminder that in a world without honor, honor becomes a burden. A reminder that good intentions aren't enough when you're surrounded by those who thrive on bad ones. Fairness, decency, and virtue won't shield you in a land ruled by treachery and betrayal.</p>
+
+    <p>Ned Stark's tragedy holds a mirror to all of us, a reminder that idealism without strategy is more a flaw than a virtue. In a world where the rules are written by those who break them, good men either learn to play or get crushed beneath the weight of their own innocence. He who dares to be righteous in a world of knives must first sharpen his wit.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="see-also">
+    <div class="label">See also</div>
+    <div class="see-also-links">
+      <a href="https://medium.com/@paultomisola/the-business-of-listening-595649811d28" target="_blank" rel="noopener">The Business of Listening</a>
+      <a href="https://medium.com/@paultomisola/nobody-is-coming-to-save-you-ebf0f255e875" target="_blank" rel="noopener">Nobody is Coming to Save You</a>
+      <a href="https://paultomisola.substack.com/p/the-ontology-of-the-queef" target="_blank" rel="noopener">The Ontology of the Queef</a>
+    </div>
+  </div>
+
+  <div class="article-footer">
+    <a class="source-link" href="https://medium.com/@paultomisola/ned-starks-fate-as-a-metaphor-for-life-a-stark-lesson-from-game-of-thrones-1e93ef620b7b" target="_blank" rel="noopener">Originally published on Medium ↗</a>
+  </div>
+</article>
+
+<hr class="rule">
+<footer>
+  <div class="wrap">
+    <span class="label">Lagos, Nigeria</span>
+    <span class="label">© 2026 Paul Tomisola</span>
+  </div>
+</footer>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcelona Isn't Ready for Flick–Yet – Paul Tomisola</title>
+<meta name="description" content="Barcelona's financial reality and squad limitations mean the club is not yet structurally prepared for the demands of Hansi Flick's football.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17140F;
+    --text: #EDEAE2;
+    --muted: #9C9A92;
+    --rule: rgba(255,255,255,0.16);
+    --accent: #D9A441;
+    --max-w: 760px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+  .serif{font-family:'Lora', Georgia, serif;}
+
+  .label{
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  header{padding:28px 0;}
+  header .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  .brand{
+    font-family:'Lora', Georgia, serif;
+    font-size:15px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  nav{display:flex; gap:26px;}
+  nav a{
+    position:relative;
+    font-size:14.5px;
+    text-decoration:none;
+    color:var(--muted);
+    transition:color .3s cubic-bezier(.4,0,.2,1);
+    padding-bottom:3px;
+  }
+  nav a::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:0;
+    width:100%; height:1px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .35s cubic-bezier(.4,0,.2,1);
+  }
+  nav a:hover::after, nav a:focus-visible::after{transform:scaleX(1); transform-origin:left;}
+  nav a:hover, nav a:focus-visible{color:var(--text);}
+
+  hr.rule{border:none; border-top:1px solid var(--rule); margin:0;}
+
+  .back-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--muted); text-decoration:none; padding:20px 0;
+    transition:color .2s ease;
+  }
+  .back-link:hover, .back-link:focus-visible{color:var(--accent);}
+
+  .article-header{padding:12px 0 30px;}
+  .article-header h1{
+    font-family:'Lora', Georgia, serif;
+    font-weight:500;
+    font-size:clamp(30px, 5vw, 42px);
+    line-height:1.18;
+    margin:0 0 18px;
+  }
+  .article-byline{
+    font-family:'Lora', Georgia, serif;
+    font-style:italic;
+    font-size:14.5px;
+    color:var(--muted);
+    margin:0 0 22px;
+  }
+  .article-byline a{
+    color:var(--muted);
+    text-decoration:underline;
+    text-decoration-color:var(--rule);
+    text-underline-offset:2px;
+    transition:color .2s ease;
+  }
+  .article-byline a:hover, .article-byline a:focus-visible{color:var(--accent); text-decoration-color:var(--accent);}
+
+  .article-meta{display:flex; gap:22px; flex-wrap:wrap; padding-top:6px;}
+  .article-meta div .label{margin-bottom:6px;}
+  .article-meta div p{margin:0; font-size:14.5px;}
+
+  .full-version-note{
+    font-size:13.5px; color:var(--muted); padding:24px 0 0; margin:0 0 -12px;
+    border-left:2px solid var(--rule); padding-left:16px;
+  }
+  .full-version-note a{color:var(--accent); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .full-version-note a:hover, .full-version-note a:focus-visible{text-decoration-color:var(--accent);}
+
+  .article-body{padding:36px 0 20px; font-size:16.5px; line-height:1.85; color:#DDDAD1;}
+  .article-body p{margin:0 0 26px;}
+  .article-body p:first-of-type::first-letter{
+    font-family:'Lora', Georgia, serif;
+    font-size:58px;
+    font-weight:500;
+    float:left;
+    line-height:0.85;
+    padding:6px 8px 0 0;
+    color:var(--text);
+  }
+  .article-body figure{margin:34px 0;}
+  .article-body figcaption{
+    font-size:12.5px; color:var(--muted); margin-top:10px;
+    letter-spacing:0.02em;
+  }
+  .article-body em{font-style:italic; color:var(--text);}
+  .article-body strong{font-weight:600; color:var(--text);}
+
+  .see-also{padding:28px 0 8px;}
+  .see-also .label{margin-bottom:14px;}
+  .see-also-links{display:flex; flex-wrap:wrap; gap:10px 20px;}
+  .see-also-links a{
+    font-size:14.5px; text-decoration:none; color:var(--text);
+    border-bottom:1px solid var(--rule); padding-bottom:2px;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .see-also-links a:hover, .see-also-links a:focus-visible{color:var(--accent); border-color:var(--accent);}
+
+  .article-footer{padding:28px 0 56px;}
+  .source-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14px; text-decoration:none;
+    color:var(--accent); border-bottom:1px solid var(--accent); padding-bottom:3px;
+    transition:opacity .2s ease;
+  }
+  .source-link:hover, .source-link:focus-visible{opacity:0.75;}
+
+  footer{padding:24px 0 40px;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:600px){
+    .wrap{padding:0 22px;}
+    header{padding:22px 0;}
+    nav{gap:18px;}
+    .back-link{padding:16px 0;}
+    .article-header{padding:8px 0 24px;}
+    .article-meta{gap:18px;}
+    .article-body{padding:28px 0 16px; font-size:16px;}
+    .article-body p:first-of-type::first-letter{font-size:48px;}
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Paul Tomisola</a>
+    <nav>
+      <a href="../writings.html">Writing</a>
+      <a href="../elsewhere.html">Elsewhere</a>
+    </nav>
+  </div>
+</header>
+<hr class="rule">
+
+<div class="wrap">
+  <a class="back-link" href="../writings.html">← Back to writing</a>
+</div>
+
+<article class="wrap reveal">
+  <div class="article-header">
+    <h1>Mythbusting Kai Havertz</h1>
+    <p class="article-byline">Debunking the laziest Havertz narratives – originally published on <a href="https://medium.com/@paultomisola/mythbusting-kai-havertz-85c1516573e5" target="_blank" rel="noopener">Medium</a></p>
+    <div class="article-meta">
+      <div><div class="label">Status</div><p>Published, Aug 2026</p></div>
+      <div><div class="label">Genre</div><p>Football analysis</p></div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <p class="full-version-note">For the full version – with images, embedded tweets, and visual breakdowns – read it on <a href="https://medium.com/@paultomisola/mythbusting-kai-havertz-85c1516573e5" target="_blank" rel="noopener">Medium</a>.</p>
+
+  <div class="article-body">
+    <p>I already put this essay together in my head sometime last year, but only recently put it down on paper after Havertz found the back of the net in yet another decisive game against Manchester City in the Community Shield.</p>
+
+    <p>Funny enough, I had already left some footnotes in this thread without knowing it.</p>
+
+    <p>There's no point cataloguing the horrendous things that have been said and written about Kai over the last two, three years. You've already seen them, or written one yourself. Let's just get into it.</p>
+
+    <p><strong>Myth #1: Havertz Is Lazy</strong></p>
+
+    <p>Havertz's awkward movements and languid body have earned him a reputation for being lazy. But is he, really? Let's look at how much he actually runs.</p>
+
+    <p>As Joel Adejola proposed in his essay <em>How to Classify Running Capacity Among Elite Players</em>, we can classify running capacity into four tiers, from players who can't sustain high-intensity running to those who can repeatedly sprint and stay aggressive while doing it.</p>
+
+    <p>Havertz sits comfortably in the third tier, with a genuine case for the fourth. For starters, look at how much ground he covers. At the start of last season, Havertz led the entire Arsenal squad with 77km covered across his first seven games, an average of 11km per match.</p>
+
+    <p>But distance alone doesn't tell you whether a player is covering the right ground, or simply running a lot. This is where Arteta's own description of Havertz becomes useful. He calls the German a "powerhouse", describing a player capable of covering large distances, being physically robust and handling whatever physical demands his role requires. Havertz isn't just running a lot. He is trusted to cover specific areas of the pitch and meet the physical demands of his role.</p>
+
+    <p>Arteta himself has put it plainly: genetically, Havertz is a powerhouse, so well-built that his body absorbs everything asked of it, whether that's running in less glamorous zones or being physically robust across long distances.</p>
+
+    <p><strong>Myth #2: He's Not a Proper №9</strong></p>
+
+    <p>In 2024, former Arsenal player Lucas Podolski questioned whether Havertz was "truly the striker Arsenal needs", insisting Arsenal needed a "real" number 9 instead.</p>
+
+    <p>Unsurprisingly, plenty of fans and pundits share the same sentiment. But for a striker who can combine with almost anyone on the pitch, receive long balls, win fouls, press aggressively, dominate the box and the spaces around it, contribute reliably at set pieces, and run in behind and into the channels, it is strange that the idea of Havertz being miscast as a striker remains so mainstream.</p>
+
+    <p>I think the misconception stems from a misguided expectation of what a number 9 is supposed to look like. When you think of a striker, you think goals. You want to see the ball smashed into the back of the net. And, of course, scoring goals remains the most important currency for any forward. But the modern game has evolved to the point where coaches increasingly value strikers who can do more than simply finish the chances created for them. They want forwards capable of creating dangerous situations themselves, particularly against the best teams in the world.</p>
+
+    <p>Havertz might not be a Haaland-type goalscorer. He doesn't need to be. What he offers is the ability to take his team up the pitch, connect attacks, stretch defences, attack space, compete physically and create problems for defenders in multiple ways.</p>
+
+    <p><strong>Myth #3: He's a Bottler in Big Moments</strong></p>
+
+    <p>Perhaps the most ludicrous of them all is the peddled notion that Havertz is an unreliable choker when the stakes are highest. An easy narrative to form around a couple of high-visibility misses, while ignoring several other dramatic contributions in big games.</p>
+
+    <p>Havertz scored the only goal of the 2021 Champions League final as Chelsea beat Manchester City at the Estádio do Dragão. Five years later, his opening goal for Arsenal against PSG in the 2025/26 final made him the ninth player in history to score in multiple Champions League finals, and only the third player ever to score in a Champions League final for two different clubs, alongside Cristiano Ronaldo and Mario Mandžukić.</p>
+
+    <p>And it doesn't stop there. Havertz is one of only five attackers to have scored two or more goals in a single match at back-to-back FIFA World Cups since 1978.</p>
+
+    <p><strong>Myth #4: Kai Havertz Is Slow</strong></p>
+
+    <p>Because Havertz's movements on the ball can look languid and sometimes awkward, it is easy to mistake him for a sluggish player.</p>
+
+    <p>Yes, he is not an explosive runner, and at 193cm, his long strides and relatively slow acceleration do not resemble the sharp, twitchy bursts we associate with quicker players like Gabriel Martinelli or Kylian Mbappé.</p>
+
+    <p>But is he actually slow? What do the numbers say? Havertz reached a top speed of 32.3 km/h in the 2024/25 Premier League, according to FotMob data, putting him behind only Martinelli (34.7), Madueke (33.7), Nwaneri (32.9) and Saka (32.6) among Arsenal players. And remember, Havertz spent much of that season playing through the middle rather than operating in the wide areas where players naturally have more opportunities to run into space.</p>
+
+    <p>He also reached 32.14 km/h through his first three matches, and just 82 minutes, of his 2025/26 Champions League campaign.</p>
+
+    <p>How about we leave the numbers aside and judge purely by what we see? Would you still call Havertz slow?</p>
+
+    <p>In the end, modern football discourse is all about narratives. Repeat a lie long enough and eventually it starts to sound like gospel. The media and fans have branded Kai Havertz an overpriced Bundesliga flop, and most people have subconsciously followed suit.</p>
+
+    <p>But the next time you watch the German, forget everything that has been said about him. Watch with your own eyes. What you will see is a tall, lanky forward who makes the attackers around him better, dominates the box against some of the most physical teams in Europe and has a knack for scoring important goals.</p>
+
+    <p>Perhaps that is why Manchester United legend Dimitar Berbatov sees so much of his own profile in Havertz.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="see-also">
+    <div class="label">See also</div>
+    <div class="see-also-links">
+      <a href="barcelona-isnt-ready-for-flick-yet.html">Barcelona Isn't Ready for Flick–Yet</a>
+      <a href="https://medium.com/@paultomisola/thomas-tuchel-a-masterclass-in-cowardice-vs-argentina-3f17a34df6ac" target="_blank" rel="noopener">Thomas Tuchel, A Masterclass in Cowardice vs Argentina</a>
+      <a href="https://medium.com/@paultomisola/projections-profiling-rodri-at-barcelona-and-why-real-madrid-need-him-more-b24758c09df5" target="_blank" rel="noopener">Profiling Rodri at Barcelona</a>
+    </div>
+  </div>
+
+  <div class="article-footer">
+    <a class="source-link" href="https://medium.com/@paultomisola/mythbusting-kai-havertz-85c1516573e5" target="_blank" rel="noopener">Originally published on Medium ↗</a>
+  </div>
+</article>
+
+<hr class="rule">
+<footer>
+  <div class="wrap">
+    <span class="label">Lagos, Nigeria</span>
+    <span class="label">© 2026 Paul Tomisola</span>
+  </div>
+</footer>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
